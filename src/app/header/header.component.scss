@@ -1,0 +1,13 @@
+.cover {
+    height: calc(100vh - 300px);
+    min-height: 600px;
+}
+
+.header {
+    background-color: var(--accent-tint);
+    color: var(--accent);
+}
+
+.lead {
+    color: var(--gray);
+}
