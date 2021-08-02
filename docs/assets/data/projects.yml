@@ -1,0 +1,38 @@
+---
+- name: Artemis
+  slug: artemis
+  type: Personal Project
+  tagline: Inspired by Lindsey Stirling's Artemis album.
+  description: A personal project created with the intent of refreshing my knowledge in Unity after a year of absence.
+  thumbnail: artemis.png
+  engine: Unity
+  genre: Arcade
+  platform: Windows, Mac
+  release: TBD
+  devlog: false
+
+- name: Love in the Neighbor-Hoot
+  slug: love-in-the-neighbor-hoot
+  type: Global Game Jam
+  tagline: A 4-player co-op puzzle game.
+  description: A 4-player co-op puzzle game. Match the couples by pushing them towards each other!
+  thumbnail: love-in-the-neighbor-hoot.png
+  engine: Unity
+  genre: Puzzle
+  platform: Windows, Mac
+  release: 2020
+  website: https://globalgamejam.org/2020/games/owl-love-3
+  devlog: false
+
+- name: H-Avenue!
+  slug: h-avenue
+  type: Global Game Jam
+  tagline: They're waiting for you!
+  description: A racing game where you get to construct your track to get you home as fast as possible!
+  thumbnail: h-avenue.png
+  engine: Unity
+  genre: Puzzle, Racing
+  platform: Windows, Mac
+  release: 2019
+  website: https://globalgamejam.org/2019/games/h-avenue
+  devlog: false
