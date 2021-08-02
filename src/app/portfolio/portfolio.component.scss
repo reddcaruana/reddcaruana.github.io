@@ -1,0 +1,22 @@
+.portfolio {
+    a {
+        text-decoration: none;
+    }
+
+    .portfolio-image {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        
+        .image-inner {
+            background-color: var(--accent-tint);
+            background-position: center;
+            background-size: cover;
+            padding-bottom: 56.25%;
+        }
+    }
+
+    p {
+        color: var(--gray);
+    }
+}

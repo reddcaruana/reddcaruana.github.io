@@ -1,0 +1,50 @@
+<redd-header *ngIf="project" type="narrow" [title]="project.name" [tagline]="project.tagline"></redd-header>
+
+<section class="project py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 d-none d-md-block">
+                <redd-portfolio-nav></redd-portfolio-nav>
+            </div>
+            <div class="col-md-8 col-lg-9" *ngIf="project">
+                <div class="project-image mb-3">
+                    <div class="image-inner" [ngStyle]="{ 'background-image': 'url(assets/portfolio/' + project.thumbnail + ')' }"></div>
+                </div>
+
+                <p>{{ project.description }}</p>
+
+                <ul class="list-unstyled m-0">
+                    <li>
+                        <strong>Type: </strong>
+                        {{ project.type }}
+                    </li>
+
+                    <li>
+                        <strong>Release: </strong>
+                        {{ project.release }}
+                    </li>
+    
+                    <li>
+                        <strong>Engine: </strong>
+                        {{ project.engine }}
+                    </li>
+    
+                    <li>
+                        <strong>Platform: </strong>
+                        {{ project.platform }}
+                    </li>
+    
+                    <li>
+                        <strong>Genre: </strong>
+                        {{ project.genre }}
+                    </li>
+
+                    <li *ngIf="project.website">
+                        <strong>Website: </strong>
+                        <a [href]="project.website" target="_blank">{{ project.website }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

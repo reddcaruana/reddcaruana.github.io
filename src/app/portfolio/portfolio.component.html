@@ -1,0 +1,20 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Portfolio</h2>
+            </div>
+        </div>
+
+        <div class="portfolio">
+            <div class="row">
+                <a class="d-block col-md-4 mt-3 mt-md-4" [routerLink]="['/', 'project', project.slug]" *ngFor="let project of projects">
+                    <div class="portfolio-image">
+                        <div class="image-inner" [ngStyle]="{ 'background-image': 'url(/assets/portfolio/' + project.thumbnail + ')' }"></div>
+                    </div>
+                    <p class="text-center m-0 mt-2">{{ project.name }} ({{ project.release }})</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

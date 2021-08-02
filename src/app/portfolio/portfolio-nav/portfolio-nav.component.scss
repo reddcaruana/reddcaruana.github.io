@@ -1,0 +1,10 @@
+.projects-list {
+    a {
+        color: var(--gray);
+        text-decoration: none;
+
+        &.active {
+            color: var(--accent);
+        }
+    }
+}

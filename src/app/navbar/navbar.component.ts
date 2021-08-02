@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Page } from '../structs';
 
 @Component({
@@ -12,4 +13,6 @@ export class NavbarComponent
   navbar: Page[] = [
     { name: 'Home', url: '/' },
   ];
+
+  faBars = faBars;
 }

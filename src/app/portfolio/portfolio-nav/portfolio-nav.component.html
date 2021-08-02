@@ -1,0 +1,7 @@
+<h5>Projects</h5>
+
+<ul class="projects-list list-unstyled m-0">
+    <li *ngFor="let project of projects">
+        <a routerLinkActive="active" [routerLink]="['/', 'project', project.slug]">{{ project.name }}</a>
+    </li>
+</ul>
