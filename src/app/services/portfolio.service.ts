@@ -1,26 +1,23 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import * as YAML from 'yaml';
 import { Project } from '../structs';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PortfolioService
+export class PortfolioService extends BaseService
 {
-  constructor(
-    private http: HttpClient
-  ) { }
+  private projects: Project[] = [];
 
   /**
-   * Returns the projects.
-   * @returns The projects as a promise.
+   * Preloads the YAML data.
    */
-  async getProjects(): Promise<Project[]>
+  async init()
   {
-    return this.http.get('/assets/data/projects.yml', {
+    this.projects = await this.http.get('/assets/data/projects.yml', {
       responseType: 'text'
     }).pipe(
       map(text => YAML.parse(text) as Project[])
@@ -28,13 +25,21 @@ export class PortfolioService
   }
 
   /**
+   * Returns the projects.
+   * @returns The projects as a promise.
+   */
+  getProjects(): Project[]
+  {
+    return this.projects;
+  }
+
+  /**
    * Returns a project.
    * @param slug The project slug.
    * @returns The project, or false.
    */
-  async getProject(slug: string): Promise<Project | undefined>
+  getProject(slug: string): Project | undefined
   {
-    const projects: Project[] = await this.getProjects();
-    return projects.find(p => p.slug == slug) || undefined;
+    return this.projects.find(p => p.slug == slug) || undefined;
   }
 }

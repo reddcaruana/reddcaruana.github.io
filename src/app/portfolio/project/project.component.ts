@@ -29,7 +29,7 @@ export class ProjectComponent implements OnInit, OnDestroy
   }
 
   // Get the project on init.
-  async ngOnInit()
+  ngOnInit()
   {
     this.getProject();
   }
@@ -43,10 +43,10 @@ export class ProjectComponent implements OnInit, OnDestroy
   /**
    * Gets a project from the YAML file.
    */
-  async getProject()
+  getProject()
   {
     const slug = this.route.snapshot.params.slug;
-    this.project = await this.portfolioService.getProject(slug);
+    this.project = this.portfolioService.getProject(slug);
 
     if (this.project === undefined)
       this.router.navigateByUrl('404')

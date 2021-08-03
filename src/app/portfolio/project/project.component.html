@@ -39,9 +39,13 @@
                         {{ project.genre }}
                     </li>
 
-                    <li *ngIf="project.website">
+                    <li *ngIf="project.website" class="d-none d-md-inline">
                         <strong>Website: </strong>
                         <a [href]="project.website" target="_blank">{{ project.website }}</a>
+                    </li>
+
+                    <li *ngIf="project.website" class="d-inline d-md-none">
+                        <a [href]="project.website" target="_blank">Visit Website</a>
                     </li>
                 </ul>
             </div>

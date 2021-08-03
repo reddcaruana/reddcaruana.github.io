@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +13,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectComponent } from './portfolio/project/project.component';
 import { PortfolioNavComponent } from './portfolio/portfolio-nav/portfolio-nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PortfolioService } from './services/portfolio.service';
+import { BaseService } from './services/base.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: providerFactory,
+      deps: [ PortfolioService ],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function providerFactory(provider: BaseService)
+{
+  return () => provider.init();
+}
