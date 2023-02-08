@@ -47,6 +47,10 @@
                     <li *ngIf="project.website" class="d-inline d-md-none">
                         <a [href]="project.website" target="_blank">Visit Website</a>
                     </li>
+
+                    <li *ngIf="project['download-caption']" class="mt-2">
+                        <a [href]="project.download">{{ project['download-caption'] }}</a>
+                    </li>
                 </ul>
             </div>
         </div>

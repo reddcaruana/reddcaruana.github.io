@@ -13,6 +13,8 @@ export interface Project
     tagline: string;
     description: string;
     thumbnail: string;
+    'download-caption': string;
+    download: string;
 
     engine: string;
     genre: string;

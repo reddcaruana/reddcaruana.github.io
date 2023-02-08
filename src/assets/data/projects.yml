@@ -1,14 +1,29 @@
 ---
-- name: Artemis
-  slug: artemis
-  type: Personal Project
-  tagline: Inspired by Lindsey Stirling's Artemis album.
-  description: A personal project created with the intent of refreshing my knowledge in Unity after a year of absence.
-  thumbnail: artemis.png
+# - name: Project Niall
+#   slug: project-niall
+#   type: Personal Project
+#   tagline: A short RPG
+#   description: TBD
+#   thumbnail: project-niall.png
+#   engine: Unity
+#   genre: RPG
+#   platform: TBD
+#   release: TBD
+#   devlog: false
+
+- name: Egg-scuse Me!
+  slug: egg-scuse-me
+  type: Global Game Jam
+  tagline: A 4-player couch co-op game.
+  description: A 4-player couch co-op game. Deliver eggs to their hens!
+  thumbnail: egg-scuse-me.png
   engine: Unity
-  genre: Arcade
-  platform: Windows, Mac
-  release: TBD
+  genre: Cooperative
+  platform: Windows, Mac, Android
+  release: 2023
+  website: https://globalgamejam.org/2023/games/egg-7
+  download-caption: 'APK download'
+  download: /assets/downloads/egg-scuse-me.apk
   devlog: false
 
 - name: Love in the Neighbor-Hoot
