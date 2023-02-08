@@ -8,7 +8,7 @@
 
         <div class="portfolio">
             <div class="row">
-                <a class="d-block col-md-4 mt-3 mt-md-4" [routerLink]="['/', 'project', project.slug]" *ngFor="let project of projects">
+                <a class="d-block col-md-4 mt-4" [routerLink]="['/', 'project', project.slug]" *ngFor="let project of projects">
                     <div class="portfolio-image">
                         <div class="image-inner" [ngStyle]="{ 'background-image': 'url(/assets/portfolio/' + project.thumbnail + ')' }"></div>
                     </div>

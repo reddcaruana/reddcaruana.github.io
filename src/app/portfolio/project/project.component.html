@@ -39,17 +39,18 @@
                         {{ project.genre }}
                     </li>
 
-                    <li *ngIf="project.website" class="d-none d-md-inline">
+                    <li *ngIf="project.website" class="d-none d-md-block">
                         <strong>Website: </strong>
                         <a [href]="project.website" target="_blank">{{ project.website }}</a>
                     </li>
-
-                    <li *ngIf="project.website" class="d-inline d-md-none">
-                        <a [href]="project.website" target="_blank">Visit Website</a>
+                    
+                    <li *ngIf="project['download-caption']" class="d-none d-md-block">
+                        <a [href]="project.download">{{ project['download-caption'] }}</a>
                     </li>
 
-                    <li *ngIf="project['download-caption']" class="mt-2">
-                        <a [href]="project.download">{{ project['download-caption'] }}</a>
+                    <li *ngIf="project.website" class="mt-4 d-inline-block d-md-none d-flex">
+                        <a [href]="project.website" class="btn btn-primary flex-fill" target="_blank">Visit Website</a>
+                        <a *ngIf="project['download-caption']" [href]="project.download" class="ms-3 btn btn-primary flex-fill">{{ project['download-caption'] }}</a>
                     </li>
                 </ul>
             </div>
