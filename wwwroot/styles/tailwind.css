@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Jost", sans-serif;
+
+    --brand: #579dcf;
+    --brand-dark: #3d6e91;
+    --brand-light: #ddebf5;
+}

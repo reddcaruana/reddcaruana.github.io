@@ -1,28 +1,27 @@
 {
-  "name": "reddcaruana.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "tw:build": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css",
-    "tw:watch": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css --watch",
-    "tw:prod": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css --minify",
-    "net:run": "npm run tw:build && dotnet run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reddcaruana/reddcaruana.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/reddcaruana/reddcaruana.github.io/issues"
-  },
-  "homepage": "https://github.com/reddcaruana/reddcaruana.github.io#readme",
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
-  }
+    "name": "reddcaruana.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "tw:build": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css",
+        "tw:watch": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css --watch",
+        "tw:prod": "npx @tailwindcss/cli -i ./wwwroot/styles/tailwind.css -o ./wwwroot/css/app.css --minify"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/reddcaruana/reddcaruana.github.io.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/reddcaruana/reddcaruana.github.io/issues"
+    },
+    "homepage": "https://github.com/reddcaruana/reddcaruana.github.io#readme",
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.1.14",
+        "tailwindcss": "^4.1.14"
+    }
 }
